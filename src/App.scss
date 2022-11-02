@@ -139,7 +139,7 @@ table {
     position: relative;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0,);
+    background-color: rgb(0,0,0,0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,8 +157,10 @@ table {
 // LANDING PAGE 
 
 .top-container {
-    position: relative;
+    position: absolute;
     text-align: center;
+    top:0;
+    left:0;
 }
 
 .img-div {
@@ -172,12 +174,21 @@ img {
     object-fit: cover;
     opacity: 0.4;
   }
+
+  .span-div {
+    display: flex;
+    width: 100%;
+    position:absolute;
+    top: 25%;
+    z-index: 2;
+   
+  }
  
   span{
     color:white;
     z-index: 2;
-    position:relative;
-    bottom: 800px;
+    // position:relative;
+    // bottom: 800px;
     margin: 0 auto;
     font-size: 3.5rem;
   }
