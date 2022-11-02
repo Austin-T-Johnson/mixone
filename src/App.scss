@@ -177,6 +177,9 @@ img {
 
   .span-div {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
     width: 100%;
     position:absolute;
     top: 25%;
@@ -187,8 +190,17 @@ img {
   span{
     color:white;
     z-index: 2;
-    // position:relative;
-    // bottom: 800px;
+    font-family: $header;
     margin: 0 auto;
     font-size: 3.5rem;
+    text-shadow: 2px 2px  rgb(0, 0, 0, 0.5);
+  }
+
+  p {
+    color:white;
+    z-index: 2;
+    font-family: $header;
+    margin: 0 auto;
+    font-size: 2rem;
+    text-shadow: 2px 2px  rgb(0, 0, 0, 0.5);
   }

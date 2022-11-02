@@ -7,7 +7,8 @@ const Landing = () => {
             <img src={img} alt="David Guetta On Stage"></img>
         </div>
         <div className='span-div'>
-             <span>MixOne Sound <br></br><br></br>Southern Californias Premiere Live Event Production Company</span>
+             <span>MixOne Sound</span> 
+             <p>Southern Californias Premiere Live Event Production Company</p>
         </div>
        
     </div>
