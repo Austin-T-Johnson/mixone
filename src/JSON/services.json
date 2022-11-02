@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Audio",
+        "txt": "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "img": "photos/audio.webp"
+    },
+    {
+        "id": 2,
+        "name": "Lighting",
+        "txt": "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "img": "photos/lighting.webp"
+    },
+    {
+        "id": 3,
+        "name": "Video",
+        "txt": "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "img": "photos/video.webp"
+    }
+]

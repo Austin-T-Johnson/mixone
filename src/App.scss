@@ -139,7 +139,6 @@ table {
     position: relative;
     top: 0;
     left: 0;
-    // background-color: rgb(0,0,0,0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,16 +147,25 @@ table {
     font-size: 1.2rem;
     padding: 20px;
     font-family: $links;
+
+    @include media-query($small) {
+        max-height: 50px;
+    }
 }
+
 .logo-img {
     height: 100px;
     padding: 10px;
+
+    @include media-query($small) {
+        display: none;
+    }
 }
 
 button {
     margin-top: 20px;
     font-size: 18px;
-    color:$austin-grey;
+    color: $austin-grey;
     font-weight: 800;
     cursor: pointer;
     position: relative;
@@ -167,6 +175,10 @@ button {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
+
+    @include media-query($small) {
+        display: none;
+    }
 }
 
 
@@ -195,8 +207,10 @@ button:after {
     transition-property: width, left;
 }
 
- .active {
-    color: white!important;
+
+
+.active {
+    color: white !important;
 }
 
 // LANDING PAGE 
@@ -204,8 +218,8 @@ button:after {
 .top-container {
     position: absolute;
     text-align: center;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .img-div {
@@ -218,34 +232,127 @@ button:after {
     width: 100%;
     object-fit: cover;
     opacity: 0.4;
-  }
 
-  .span-div {
+}
+
+.span-div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 50px;
     width: 100%;
-    position:absolute;
+    position: absolute;
     top: 25%;
     z-index: 2;
-   
-  }
- 
-  span{
-    color:white;
+}
+
+.mix1-span {
+    color: white;
     z-index: 2;
     font-family: $regular;
     margin: 0 auto;
     font-size: 4rem;
-    text-shadow: 2px 2px  rgb(0, 0, 0, 0.5);
-  }
+    text-shadow: 2px 2px rgb(0, 0, 0, 0.5);
 
-  p {
-    color:white;
+    @include media-query($small) {
+        font-size: 2.5rem;
+
+    }
+}
+
+.p-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include media-query($small) {
+        top: 65%;
+        width: 100%;
+
+    }
+
+}
+
+p {
+    color: white;
     z-index: 2;
     font-family: $regular;
     margin: 0 auto;
     font-size: 2rem;
-    text-shadow: 2px 2px  rgb(0, 0, 0, 0.5);
-  }
+    text-shadow: 2px 2px rgb(0, 0, 0, 0.5);
+
+    @include media-query($small) {
+        font-size: 1rem;
+    }
+}
+.lower-container {
+   
+    padding: 50px;
+}
+
+.services-h1 {
+    font-size: 3rem;
+    font-family: $regular;
+    margin: 0 auto;
+    width: 50%;
+    line-height: 5rem;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+.services-inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30%;
+    gap: 15px;
+}
+
+.services-txt-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    padding: 25px;
+
+}
+
+.services-name {
+    color: black;
+    font-size: 2rem;
+    font-family: $regular;
+    margin: 25px 0px;
+}
+
+.services-txt {
+    color: black;
+    font-family: $regular;
+    font-size: 0.85rem !important;
+}
+
+.services-img {
+    height: 250px;
+    width: 500px;
+    cursor: pointer;
+}
+
+.services-img:hover {
+    transform: scale(1.1);
+    transition: transform .5s ease;
+}
