@@ -4,7 +4,7 @@ const Landing = () => {
   return (
     <div className='top-container'>
         <div className='img-div'>
-            <img src={img} alt="David Guetta On Stage"></img>
+            <img src={img} alt="David Guetta On Stage" className='david-guetta-img'></img>
         </div>
         <div className='span-div'>
              <span>MixOne Sound</span> 

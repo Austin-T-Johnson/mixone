@@ -1,20 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/images/MixOne-white-logo.png'
 const Header = () => {
-  return (
-    <div className='header'>
-       <Link to="/"><img src={logo} alt="logo" className='logo-img'></img></Link>
-       <Link to="/">Home</Link>
-       <Link to="/audio">Audio</Link>
-       <Link to="/lighting">Lighting</Link>
-       <Link to="/video">Video</Link>
-       <Link to="/concert-event-photos">Concert Event Photos</Link>
-       <Link to="/corporate-event-photos">Corporate Event Photos</Link>
-       <Link to="/contact">Contact Us</Link>
+    return (
+        <div className='header'>
+            <NavLink to="/"><img src={logo} alt="logo" className='logo-img'></img></NavLink>
+            <button><NavLink to="/" className={(link) => link.isActive ? "active" : ""}>Home</NavLink></button>
+            <button><NavLink to="/audio" className={(link) => link.isActive ? "active" : ""}>Audio</NavLink></button>
+            <button><NavLink to="/lighting" className={(link) => link.isActive ? "active" : ""}>Lighting</NavLink></button>
+            <button><NavLink to="/video" className={(link) => link.isActive ? "active" : ""}>Video</NavLink></button>
+            <button> <NavLink to="/concert-event-photos" className={(link) => link.isActive ? "active" : ""}>Concert Event Photos</NavLink></button>
+            <button><NavLink to="/corporate-event-photos" className={(link) => link.isActive ? "active" : ""}>Corporate Event Photos</NavLink></button>
+            <button> <NavLink to="/contact" className={(link) => link.isActive ? "active" : ""}>Contact Us</NavLink></button>
 
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Header
