@@ -5,6 +5,13 @@ const Header = () => {
   return (
     <div className='header'>
        <Link to="/"><img src={logo} alt="logo" className='logo-img'></img></Link>
+       <Link to="/audio">Audio</Link>
+       <Link to="/lighting">Lighting</Link>
+       <Link to="/video">Video</Link>
+       <Link to="/concert-event-photos">Concert Event Photos</Link>
+       <Link to="/corporate-event-photos">Corporate Event Photos</Link>
+       <Link to="/contact">Contact Us</Link>
+
     </div>
   )
 }
