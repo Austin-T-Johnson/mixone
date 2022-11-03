@@ -1,14 +1,11 @@
 import React from 'react'
 import img from '../assets/images/David-Guetta.jpeg'
 import services from '../JSON/services.json'
-
+import clients from '../JSON/clients.json'
 const Landing = () => {
     return (
         <>
             <div className='top-container'>
-                {/* <div className='img-div'>
-                    <img src={img} alt="David Guetta On Stage" className='david-guetta-img'></img>
-                </div> */}
                 <div className='mix1-span-div'>
                     <span className='mix1-span'>MixOne Sound</span>
                 </div>
@@ -19,7 +16,7 @@ const Landing = () => {
 
             <div className='middle-container'>
                 <div className='services-h1'>
-                   <h1>Full-Service<br></br> Event Production Solution</h1> 
+                    <h1>Full-Service<br></br> Event Production Solution</h1>
                 </div>
 
                 <div className='services-container'>
@@ -43,7 +40,15 @@ const Landing = () => {
                     <h1>Clients We Have Worked With ↴</h1>
                 </div>
 
-
+                <div className='client-logo-container'>
+                    {clients.map((client) => {
+                        return (
+                            <div className='client-logo-div'>
+                                    <img className='client-logo' src={client.img} alt="client logos"></img>
+                                </div>
+                        )
+                    })}
+                </div>
 
 
             </div>
