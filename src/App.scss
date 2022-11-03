@@ -106,6 +106,8 @@ section {
 
 body {
     line-height: 1;
+    background-image: url("./assets/images/bg4.jpeg");
+    background-size: inherit;
 }
 
 ol,
@@ -165,7 +167,7 @@ table {
 button {
     margin-top: 20px;
     font-size: 18px;
-    color: $austin-grey;
+    color: #03FEF8;
     font-weight: 800;
     cursor: pointer;
     position: relative;
@@ -175,7 +177,7 @@ button {
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: color;
-
+    text-shadow: 2px 2px rgb(0, 0, 0, 0.8);
     @include media-query($small) {
         display: none;
     }
@@ -184,7 +186,8 @@ button {
 
 button:focus,
 button:hover {
-    color: #888888;
+    color: #03FEF8;
+    
 }
 
 button:focus:after,
@@ -201,10 +204,11 @@ button:after {
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: #888888;
+    background-color: #03FEF8;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
+    
 }
 
 
@@ -215,27 +219,32 @@ button:after {
 
 // LANDING PAGE 
 
+// TOP CONTAINER
+
 .top-container {
+   height: 600px;
+   width: 100%;
+   text-align: center;
+}
+.top-container::before {
+    content: "";
     position: absolute;
-    text-align: center;
-    top: 0;
+    margin: 0px auto;
     left: 0;
+    top: 0;
+    background-image: url("./assets/images/David-Guetta.jpeg");
+    background-size: inherit;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 1%, rgb(0,0,0) 10%, rgb(0,0,0) 60%, rgba(0,0,0,0) 85%);
+    width: 100%;
+    height: 120%;
 }
 
 .img-div {
     background-color: rgb(0, 0, 0, 0.8);
 }
 
-.david-guetta-img {
-    height: 100%;
-    z-index: 1;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.4;
-
-}
-
-.span-div {
+.mix1-span-div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -251,21 +260,21 @@ button:after {
     z-index: 2;
     font-family: $regular;
     margin: 0 auto;
-    font-size: 4rem;
-    text-shadow: 2px 2px rgb(0, 0, 0, 0.5);
-
+    font-size: 5rem;
+    text-shadow: 2px 2px rgb(0, 0, 0, 0.8);
+    font-weight: 800;
     @include media-query($small) {
         font-size: 2.5rem;
 
     }
 }
 
-.p-div {
+.top-p-div {
     display: flex;
     flex-wrap: wrap;
     width: 40%;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
@@ -290,17 +299,26 @@ p {
         font-size: 1rem;
     }
 }
-.lower-container {
-   
-    padding: 50px;
-}
+
+// MIDDLE CONTAINER
+
+
+.middle-container {
+   margin-top: 350px;
+    width: 100%;
+ }
 
 .services-h1 {
     font-size: 3rem;
     font-family: $regular;
-    margin: 0 auto;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
     line-height: 5rem;
+    color: $snow-white;
+    z-index:10;
 }
 
 .services-container {
@@ -334,14 +352,14 @@ p {
 }
 
 .services-name {
-    color: black;
+    color: $snow-white;
     font-size: 2rem;
     font-family: $regular;
     margin: 25px 0px;
 }
 
 .services-txt {
-    color: black;
+    color: $snow-white;
     font-family: $regular;
     font-size: 0.85rem !important;
 }
@@ -350,9 +368,25 @@ p {
     height: 250px;
     width: 500px;
     cursor: pointer;
+    filter: drop-shadow(0px 0px 15px #B22222);
 }
 
 .services-img:hover {
     transform: scale(1.1);
     transition: transform .5s ease;
+}
+
+//LOWER CONTAINER
+
+// .lower-container {
+//   
+// }
+
+.clients-h1 {
+    color: $snow-white;
+    font-size: 3rem;
+    font-family: $regular;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
 }

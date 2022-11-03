@@ -4,21 +4,22 @@ import services from '../JSON/services.json'
 
 const Landing = () => {
     return (
-        <div className='top-container'>
-            <div className='img-div'>
-                <img src={img} alt="David Guetta On Stage" className='david-guetta-img'></img>
-            </div>
-            <div className='span-div'>
-                <span className='mix1-span'>MixOne Sound</span>
-            </div>
-            <div className='p-div'>
-                <p>Southern Californias Premiere Live Event Production Company</p>
+        <>
+            <div className='top-container'>
+                {/* <div className='img-div'>
+                    <img src={img} alt="David Guetta On Stage" className='david-guetta-img'></img>
+                </div> */}
+                <div className='mix1-span-div'>
+                    <span className='mix1-span'>MixOne Sound</span>
+                </div>
+                <div className='top-p-div'>
+                    <p>Southern Californias Premiere Live Event Production Company</p>
+                </div>
             </div>
 
-            <div className='lower-container'>
-
+            <div className='middle-container'>
                 <div className='services-h1'>
-                    Full-Service Event Production Solution
+                   <h1>Full-Service<br></br> Event Production Solution</h1> 
                 </div>
 
                 <div className='services-container'>
@@ -35,7 +36,21 @@ const Landing = () => {
                     })}
                 </div>
             </div>
-        </div>
+
+            <div className='lower-container'>
+
+                <div className='clients-h1'>
+                    <h1>Clients We Have Worked With ↴</h1>
+                </div>
+
+
+
+
+            </div>
+
+
+        </>
+
     )
 }
 
